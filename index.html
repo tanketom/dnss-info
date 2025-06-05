@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Info Screen Slideshow</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div id="indicator"></div>
@@ -21,9 +22,8 @@
             const response = await fetch(pagesFolder);
             const text = await response.text();
             const parser = new DOMParser();
-            const doc = parser.parseFromString(text, 'text/html');
-            const links = Array.from(doc.querySelectorAll('a'))
-                .filter(link => link.href.endsWith('.html'))
+            const doc = parser.parseFrom'))
+                .filter(link => link.href.endsWith('.md'))
                 .map(link => link.href);
 
             slides = links;
@@ -45,7 +45,8 @@
 
         async function showSlide(index) {
             const response = await fetch(slides[index]);
-            const html = await response.text();
+            const md = await response.text();
+            const html = marked.parse(md);
             slideshow.innerHTML = html;
             updateIndicator();
         }
