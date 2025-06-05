@@ -8,6 +8,7 @@ body {
     width: 2048px;
     height: 2560px;
     overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
 #indicator {
@@ -35,6 +36,26 @@ body {
     width: 100%;
     height: calc(100% - 10px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#slideshow img {
+    max-width: 100%;
+    height: auto;
+}
+
+#slideshow h1 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+#slideshow p {
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: 0 auto;
 }
