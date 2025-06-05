@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 2048px;
+    height: 2560px;
+    overflow: hidden;
+}
+
+#indicator {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+#slideshow {
+    width: 100%;
+    height: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
